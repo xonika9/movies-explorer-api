@@ -1,0 +1,21 @@
+{
+  "name": "movies-explorer-api",
+  "version": "1.0.0",
+  "description": "Movies explorer app backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xonika9/movies-explorer-api.git"
+  },
+  "author": "x9",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xonika9/movies-explorer-api/issues"
+  },
+  "homepage": "https://github.com/xonika9/movies-explorer-api#readme"
+}
