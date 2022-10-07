@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const router = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const limiter = require('./middlewares/rateLimiter');
 
 const { PORT = 3000 } = process.env;
 
@@ -30,6 +31,7 @@ app.use(errors());
 app.use(requestLogger);
 app.use(errorLogger);
 app.use(errorHandler);
+app.use(limiter);
 
 async function main() {
   await mongoose.connect('mongodb://localhost:27017/movexdb', {
