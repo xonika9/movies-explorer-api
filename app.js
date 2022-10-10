@@ -26,13 +26,15 @@ app.use(express.json());
 app.use(helmet());
 
 app.use(cookieParser());
+
+app.use(requestLogger);
+app.use(limiter);
+
 app.use('/', router);
 
-app.use(errors());
-app.use(requestLogger);
 app.use(errorLogger);
+app.use(errors());
 app.use(errorHandler);
-app.use(limiter);
 
 async function main() {
   await mongoose.connect(
