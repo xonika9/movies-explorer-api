@@ -70,6 +70,9 @@ const updateUser = (req, res, next) => {
       if (err.name === 'CastError' || err.name === 'ValidationError') {
         return next(new BadRequestError(badRequestMessage));
       }
+      if (err.code === 11000) {
+        return next(new ConflictError(emailAlreadyTakenMessage));
+      }
       return next(err);
     });
 };
