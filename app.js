@@ -10,7 +10,8 @@ const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const limiter = require('./middlewares/rateLimiter');
 
-const { PORT = 3000 } = process.env;
+const { NODE_ENV, PORT = 3000, MONGO_URI } = process.env;
+const { MONGO_URI_DEV } = require('./utils/Config');
 
 const app = express();
 
@@ -34,10 +35,13 @@ app.use(errorHandler);
 app.use(limiter);
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/movexdb', {
-    useNewUrlParser: true,
-    useUnifiedTopology: false,
-  });
+  await mongoose.connect(
+    NODE_ENV === 'production' ? MONGO_URI : MONGO_URI_DEV,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: false,
+    },
+  );
   await app.listen(PORT);
 
   // eslint-disable-next-line no-console
