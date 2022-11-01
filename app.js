@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
-// const cors = require('cors');
+const cors = require('cors');
 const helmet = require('helmet');
 const router = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
@@ -15,12 +15,16 @@ const { MONGO_URI_DEV } = require('./utils/Config');
 
 const app = express();
 
-// app.use(
-//   cors({
-//     origin: ['http://localhost:3000'],
-//     credentials: true,
-//   }),
-// );
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'https://movex.nomoredomains.icu',
+      'http://movex.nomoredomains.icu',
+    ],
+    credentials: true,
+  }),
+);
 
 app.use(express.json());
 app.use(helmet());

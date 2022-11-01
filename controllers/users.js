@@ -98,7 +98,10 @@ const login = (req, res, next) => {
 };
 
 const logout = (req, res) => {
-  res.clearCookie('jwt');
+  res.clearCookie('jwt', {
+    httpOnly: true,
+    sameSite: true,
+  });
   res.send({
     status: 'Signed out',
   });
