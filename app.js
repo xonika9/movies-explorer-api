@@ -19,8 +19,8 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://movex.nomoredomains.icu',
-      'http://movex.nomoredomains.icu',
+      'https://movex.xonika.ru',
+      'http://movex.xonika.ru',
     ],
     credentials: true,
   }),
