@@ -1,16 +1,21 @@
-# Movies Explorer Backend
+# Movies Explorer
 
-Movies Explorer is the landing page, which tells about my training in Yandex. Practicum. You can also create your own account and save movies to your favorites.
+This repository contains the API for the Movies Explorer web application
+
+Movies Explorer is a web application to help you explore the films of the Beat Film Festival, an international documentary film festival about new culture.
+Here you can create your own account, search for various films and short films, add them to your favorites, and watch trailers.
+
+### About the festival [beatfilmfestival.ru](https://beatfilmfestival.ru/)
+
+The biggest documentary film festival in Russia, founded in 2010 by Kirill Sorokin and Alena Bocharova. Beat Film Festival is held annually in Moscow at the end of May and the beginning of June. Over the years it has grown into a major cultural event that brings the best examples of contemporary documentary film about music, contemporary art, urbanism, street culture, fashion and new technologies to the attention of citizens. The mission of the festival is to form a cultural agenda and open the genre of documentary films for the wide public.
+
+Each Beat Film Festival features dozens of full-length films, tens of thousands of viewers, screenings on major Moscow concert stages, and curatorial sections, working in partnership with well-known cultural institutions and media. The festival program includes Russian premieres of hits from prestigious international film festivals, a national competition to support young Russian documentary filmmakers, an educational program including discussions and public talk shows, special events and parties with Russian and international musicians and DJs.
 
 ## Links
-
-IP `95.142.45.190`
 
 Frontend [https://movex.xonika.ru/](https://movex.xonika.ru/)
 
 Backend [https://api.movex.xonika.ru/](https://api.movex.xonika.ru/)
-
-Template https://drive.google.com/file/d/1tRRWNp2eyk3JI6lZjIFIuh7d4LmOiP9S/view?usp=sharing
 
 ***
 
@@ -55,11 +60,7 @@ cd movies-explorer-api
 
 # Install dependencies
 npm i
-```
 
-### Scripts
-
-```bash
-# Run a local server
+# Run a local server at localhost
 npm run dev
 ```
