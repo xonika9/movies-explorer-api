@@ -29,7 +29,7 @@ Backend [https://api.movex.xonika.ru/](https://api.movex.xonika.ru/)
 * Babel
 * NodeJS
 * Express
-* MonngoDB
+* MongoDB
 * REST API
 
 ## Implementation
